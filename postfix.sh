@@ -19,6 +19,8 @@ postconf -e "smtp_sasl_auth_enable = yes"
 postconf -e "smtp_sasl_password_maps = hash:/etc/postfix/sasl_password"
 postconf -e "smtp_sasl_security_options = noanonymous"
 postconf -e "smtp_use_tls = yes"
+postconf -e "smtp_tls_security_level = encrypt"
+postconf -e "header_size_limit = 4096000"
 echo "nameserver 1.1.1.1" > /var/spool/postfix/etc/resolv.conf
 echo "nameserver 1.1.1.1" > /etc/resolv.conf
 
