@@ -9,6 +9,8 @@ services:
     env_file: env
     networks:
       - mail
+    volumes:
+      - postfix-vol-1:/var/spool/postfix
 networks:
   mail:
     name: mail
